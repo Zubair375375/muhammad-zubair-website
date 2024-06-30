@@ -43,7 +43,7 @@ function Hero() {
               </button>
               <button
                 type="button"
-                className="btn btn-outline-secondary btn-lg px-4"
+                className="btn btn-outline-secondary btn-lg px-4 gitHov"
               >
                 <Link
                   to="/getintouch"

@@ -5,7 +5,7 @@ import "./index.css";
 import project1 from "./PROJECT1.png";
 import project2 from "./PROJECT2.png";
 import project3 from "./PROJECT3.png";
-import project4 from "./PROJECT4.png";
+import project4 from "./PROJECT6.png";
 
 function Featured() {
   const projects = [
@@ -22,6 +22,7 @@ function Featured() {
       heading: "Memories (MERN)",
       paragraph:
         "Developed a full-stack project for past Memories with Node js, MongoDB, Express js and React js making it more realistic and user-experience level enhanced.",
+      githubLink: "https://github.com/Zubair375375/memories-project",
     },
     {
       id: 3,
@@ -29,14 +30,16 @@ function Featured() {
       heading: "Moviedesk (full-stack)",
       paragraph:
         " Developed a MovieDesk project, utilizing the Node js, mySQL, Express js and React js to ensure efficient data storage & user-experience.",
+      githubLink: "https://github.com/Zubair375375/Movie-Desk",
     },
 
     {
       id: 4,
       image: project4,
-      heading: "Last Memory (Frontend)",
+      heading: "Travel App",
       paragraph:
-        " Designed a website design for online business.  Making User Interface  more friendly and enhancing a user experience.",
+        " The travelling app is about to make a list of things which are necessary in our luggage for travelling. ",
+      githubLink: "https://github.com/Zubair375375/Project-for-Traveling",
     },
   ];
   return (
@@ -134,10 +137,21 @@ function Featured() {
             <div
               key={project.id}
               className="feature col spcBt"
-              style={{ margin: "0 1.6rem" }}
+              style={{
+                margin: "0 1.6rem",
+                // backgroundColor: "red",
+                borderRadius: "0.6rem",
+              }}
             >
               <div className="feature-icon d-inline-flex align-items-center bg-gradient fs-2 mb-3">
-                <img src={project.image} alt="" style={{ maxWidth: "20rem" }} />
+                <img
+                  src={project.image}
+                  alt=""
+                  style={{
+                    maxWidth: "17rem",
+                    borderRadius: "0.6rem 0.6rem 0 0",
+                  }}
+                />
               </div>
               <h3
                 className="fs-5 text-body-emphasis"
@@ -146,8 +160,8 @@ function Featured() {
                 {project.heading}
               </h3>
               <p style={{ maxWidth: "20rem" }}>{project.paragraph}</p>
-              <a href="#" className="icon-link">
-                Details
+              <a href={project.githubLink} target="blank" className="icon-link">
+                View code
                 <svg className="bi">
                   <use href="#chevron-right"></use>
                 </svg>

@@ -17,31 +17,36 @@ function Otherprojects() {
     {
       id: 1,
       image: project5,
-      heading: "Polyp Segmentation using deep learning",
+      heading: "Last Memory",
       paragraph:
-        "This project is about finding the colorectal cancer inside large intestine of human body and detect the abnormal growth",
+        "This project is about making memories of people who are now grown old to make their memories alive",
+      githubLink: "https://github.com/Zubair375375/Project01",
     },
     {
       id: 2,
       image: project3,
-      heading: "Memories (MERN)",
-      paragraph:
-        "Developed a full-stack project for past Memories with Node js, MongoDB, Express js and React js making it more realistic and user-experience level enhanced.",
-    },
-    {
-      id: 3,
-      image: project7,
       heading: "Moviedesk (full-stack)",
       paragraph:
-        " Developed a MovieDesk project, utilizing the Node js, mySQL, Express js and React js to ensure efficient data storage & user-experience.",
+        "Developed a MovieDesk project, utilizing the Node js, mySQL, Express js and React js to ensure efficient data storage & user-experience.",
+      githubLink: "https://github.com/Zubair375375/Movie-Desk",
     },
+    // {
+    //   id: 3,
+    //   image: project7,
+    //   heading: "Text App",
+    //   paragraph:
+    //     " This is a small project which is working on texts, to apply different functions on the specific texts",
+    //   githubLink: "https://github.com/Zubair375375/Project-for-Traveling",
+    // },
 
     {
       id: 4,
       image: project4,
-      heading: "Last Memory (Frontend)",
+      heading: "TO-DO",
       paragraph:
-        " Designed a website design for online business.  Making User Interface  more friendly and enhancing a user experience.",
+        " Todo app is about to make a list of the tasks which is gonna be done in the required time or day using React",
+      githubLink:
+        "https://github.com/Zubair375375/todoReact/tree/main/todoreact",
     },
     {
       id: 5,
@@ -49,6 +54,7 @@ function Otherprojects() {
       heading: "Polyp Segmentation using deep learning",
       paragraph:
         "This project is about finding the colorectal cancer inside large intestine of human body and detect the abnormal growth",
+      githubLink: "https://github.com/Zubair375375/Project-for-Traveling",
     },
     {
       id: 6,
@@ -56,21 +62,24 @@ function Otherprojects() {
       heading: "Memories (MERN)",
       paragraph:
         "Developed a full-stack project for past Memories with Node js, MongoDB, Express js and React js making it more realistic and user-experience level enhanced.",
+      githubLink: "https://github.com/Zubair375375/memories-project",
     },
     {
       id: 7,
       image: project6,
-      heading: "Moviedesk (full-stack)",
+      heading: "Travel App",
       paragraph:
-        " Developed a MovieDesk project, utilizing the Node js, mySQL, Express js and React js to ensure efficient data storage & user-experience.",
+        " The travelling app is about to make a list of things which are necessary in our luggage for travelling. ",
+      githubLink: "https://github.com/Zubair375375/Project-for-Traveling",
     },
 
     {
       id: 8,
       image: project8,
-      heading: "Last Memory (Frontend)",
+      heading: "React counter",
       paragraph:
-        " Designed a website design for online business.  Making User Interface  more friendly and enhancing a user experience.",
+        " This app was my first accurate app which i have developed and felt familiar with React",
+      githubLink: "https://github.com/Zubair375375/CounterRemastered",
     },
   ];
   return (
@@ -87,13 +96,20 @@ function Otherprojects() {
             <div
               key={otherProject.id}
               className="feature col spcBt"
-              style={{ margin: "0 1.6rem" }}
+              style={{
+                margin: "0 1.6rem",
+                // backgroundColor: "red",
+                borderRadius: "0.6rem",
+              }}
             >
               <div className="feature-icon d-inline-flex align-items-center bg-gradient fs-2 mb-3">
                 <img
                   src={otherProject.image}
                   alt=""
-                  style={{ maxWidth: "20rem" }}
+                  style={{
+                    maxWidth: "17rem",
+                    borderRadius: "0.6rem 0.6rem 0 0",
+                  }}
                 />
               </div>
               <h3
@@ -103,8 +119,12 @@ function Otherprojects() {
                 {otherProject.heading}
               </h3>
               <p style={{ maxWidth: "20rem" }}>{otherProject.paragraph}</p>
-              <a href="#" className="icon-link">
-                Details
+              <a
+                href={otherProject.githubLink}
+                target="blank"
+                className="icon-link"
+              >
+                View code
                 <svg className="bi">
                   <use href="#chevron-right"></use>
                 </svg>
